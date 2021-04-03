@@ -30,7 +30,7 @@
 
 %% @doc assumes that the file source data have
 lexer(Source) ->
-  lexer(Source, io_lib:nl() =:= "\n").
+  lexer(Source, io_lib:nl() =:= "\r\n").
 
 lexer(Source, WindowsNewLine) ->
   lexer(Source, {keepwhite, <<>>}, [], WindowsNewLine).
